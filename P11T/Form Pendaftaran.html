@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Program Latihan PBW</title>
+        <link rel="stylesheet" href="Program Implementasi PBW.css">
+        <script src="formScript.js"></script>
+    </head>
+    <body>
+        <header>
+            <h1> Form Pendaftaran </h1>
+        </header>
+        <nav>
+            <a href="Program Implementasi PBW.html">Home</a>
+            <a href="list.php">Anggota Aktif</a>
+            <a href="#">Daftar Sekarang!</a>
+            <a href="login.php">Login</a>
+        </nav>
+        <main>
+            <aside>
+                <h2>Formulir Pendaftaran Anggota baru</h2>
+            </aside>
+            <section>
+
+                <p id="ErrorAlert"></p>
+
+            <form name="myForm" onsubmit="validate()" action="dbconn2.php" method="post">
+                <label for="nama">Nama Lengkap:</label><br>
+                <input type="text" name="nama" id="nama" size="100"> 
+                <br><br>
+
+                <label for="birthday">Tanggal Lahir:</label><br>
+                <input type="date" name="birthday" id="birthday">
+                <br><br>
+
+                <label for="email">Email:</label><br>
+                <input type="email" name="email" id="email" size="100">
+                <br><br>
+                
+                <label for="pwd">Password:</label> <br>
+                <input type="password" name="pwd" id="pwd" size="100">
+                <br><br>
+
+                <label for="cpwd">Konfirmasi Password:</label> <br>
+                <input type="password" name="cpwd" id="cpwd" size="100">
+                <br><br>
+                
+                <label>Jenis Kelamin:</label><br>
+                <input type="radio" name="jenisKelamin" id="male" value="Laki-laki">
+                <label for="male">Laki-laki</label><br>
+                <input type="radio" name="jenisKelamin" id="female" value="Perempuan">
+                <label for="female">Perempuan</label>
+                <br><br>
+
+                <label>Bahasa Pemrograman yang Ingin Dipelajari:</label><br>
+                <input type="radio" name="bahasa" id="bahasa1" value="PHP">
+                <label for="bahasa">PHP</label><br>
+                <input type="radio" name="bahasa" id="bahasa2" value="Java">
+                <label for="bahasa">Java</label><br>
+                <input type="radio" name="bahasa" id="bahasa3" value="Python">
+                <label for="bahasa">Python</label>
+                <br><br>
+
+                <label for="matkul">Mata Kuliah Favorit:</label><br>
+                <select name="matkul" id="matkul" >
+                    <option value="">Pilihan Mata Kuliah:</option>
+                    <option value="PTI">Pengantar Teknologi Informasi</option>
+                    <option value="Matdis">Matematika Diskrit</option>
+                    <option value="Basdat">Basis Data Lanjutan</option>
+                    <option value="PBW">Pemerograman Berbasis Web</option>
+                    <option value="RPL">Rekayasa Perangkat Lunak</option>
+                </select>
+                <br><br>
+
+                <label for="alasan">Alasan Memilih Mata Kuliah Tersebut:</label><br>
+                <textarea name="alasan" id="alasan" cols="100" rows="5"></textarea>
+
+                <input type="submit" action="dbconn2.php" value="Submit">
+            </form>
+            </section>   
+        </main>
+
+        <br><br>
+        <footer>
+            <p>Copyright &copy; 2022. All rights reserved.</p>
+    </body>
+</html>
